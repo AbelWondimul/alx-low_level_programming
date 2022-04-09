@@ -1,50 +1,36 @@
 #include <stdio.h>
-#include <stdlib.h>
+
 /**
- * main - main block
- * Description: Write a program that prints all possible
- * different combinations of two digits
+ * main - create 2 pairs of numbers that do not repeat
  * Return: 0
  */
 int main(void)
 {
-int c;
-int d;
-int e;
-int f = 0;
+	int c, d;
 
-while (f < 10)
-{
-	e = 0;
-	while (e < 10)
+	for (c = 0; c <= 99; c++)
 	{
-		d = 0;
-		while (d < 10)
+		for (d = c; d <= 99; d++)
 		{
-			c = 0;
-			while (c < 10)
+			if (d != c)
 			{
-				if (!(f == c && e == d))
+
+				putchar(c / 10 + 48);
+				putchar(c % 10 + 48);
+				putchar(' ');
+				putchar(d / 10 + 48);
+				putchar(d % 10 + 48);
+
+				if (c * 100 + d != 9899)
 				{
-					putchar('0' + f);
-					putchar('0' + e);
+					putchar(',');
 					putchar(' ');
-					putchar('0' + d);
-					putchar('0' + c);
-					if (!(f + e == 18 && c + d == 17 && d == 9))
-					{
-						putchar(',');
-						putchar(' ');
-					}
 				}
-				c++;
 			}
-			d++;
+
 		}
-		e++;
+
 	}
-	f++;
-}
-putchar('\n');
-return (0);
+	putchar('\n');
+	return (0);
 }
