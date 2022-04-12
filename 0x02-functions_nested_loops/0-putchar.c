@@ -2,8 +2,8 @@
 
 
 /**
- * print _putchar
- *
+ *main-main block
+ *Description: Print _putchar 
  * Return: nothing, return void
  */
 
