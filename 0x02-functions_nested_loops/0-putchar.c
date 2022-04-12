@@ -1,12 +1,9 @@
 #include "main.h"
-
-
-/**
+ /*
  *main-main block
  *Description: Print _putchar 
  * Return: nothing, return void
  */
-
 int main(void)
 {
 _putchar('_');
